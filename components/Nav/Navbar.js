@@ -13,11 +13,11 @@ const StyledNavbar = styled.nav`
   position: fixed;
   /* background: rgba(255, 255, 255, 0.97); */
   width: 100vw;
-  height: 80px;
+  height: 190px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem;
   /* box-shadow: 0 7px 10px 0 rgba(122, 207, 255, 0.3); */
   align-items: center;
-  z-index: 3;
+  z-index: 10;
 `

@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 import NavLink from './NavLink'
+import Image from 'next/image'
 
 export default function Menu({ open, setOpen }) {
   return (
     <StyledMenu open={open}>
       <NavLink href='/'>
-        <a>Home</a>
+        <a>
+          <Image width={120} height={40} src='/img/HOME.jpg' alt='home' />
+        </a>
       </NavLink>
       <NavLink href='/'>
         <a>About</a>
@@ -20,7 +23,14 @@ export default function Menu({ open, setOpen }) {
         <a>Download</a>
       </NavLink>
       <NavLink href='/'>
-        <a>Logo</a>
+        <a>
+          <Image
+            width={238}
+            height={150}
+            src='/img/KC-LOGO.png'
+            alt='KC-Logo'
+          />
+        </a>
       </NavLink>
       <NavLink href='/'>
         <a>Calendar</a>
@@ -35,7 +45,9 @@ export default function Menu({ open, setOpen }) {
         <a>FAQs</a>
       </NavLink>
       <NavLink href='/'>
-        <a>Donate</a>
+        <a>
+          <Image width={140} height={75} src='/img/DONATE.png' alt='donate' />
+        </a>
       </NavLink>
     </StyledMenu>
   )

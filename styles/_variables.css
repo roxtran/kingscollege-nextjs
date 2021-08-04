@@ -1,3 +1,4 @@
 :root {
-  --blue: #2878FF;
+  --blue: rgb(40, 120, 255);
+  --hover-bg: rgb(205, 224, 255);
 }

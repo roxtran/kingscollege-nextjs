@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import About from '../components/About'
+import Slider from '../components/Slider'
 
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <Slider />
+      <About />
     </>
   )
 }

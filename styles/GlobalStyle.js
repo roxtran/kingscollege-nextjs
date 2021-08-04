@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #fff;
     width: 100vw;
     overflow-x: hidden;
-    font-weight: 300;
+    font-weight: 500;
   }
   a {
     cursor: pointer;
@@ -24,7 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   h1, h2, h3, h4 {
-    font-weight: 600;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
   h1 {
     font-size: 3rem;
@@ -47,6 +48,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   p {
     line-height: 1.5;
+    margin-bottom: 1rem;
   }
   ol, ul {
     padding-left: 0;
@@ -68,7 +70,7 @@ export const Button = styled.a`
   display: inline-block;
   cursor: pointer;
   background: var(--blue);
-  border-radius: 5px;
+  border-radius: 20px;
   color: #fff;
   padding: 10px 25px;
   text-align: center;
