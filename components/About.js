@@ -1,41 +1,45 @@
 import { Button } from '../styles/GlobalStyle'
 import styled from 'styled-components'
 
-export default function About() {
+export default function About({ about }) {
   return (
-    <StyledAbout>
-      <div className='wrapper'>
-        <div className='triangle'></div>
-        <div className='content'>
-          <div className='left'>
-            <h1>Who We Are</h1>
-            <p>
-              With a mission to “Develop Students Into World Citizens”, King’s
-              College is a unique co-educational, university preparatory day
-              school with an academic breadth spanning from Pre-School (age 2)
-              to University entrance. Driven by the quest for academic
-              excellence and brought forth as a viable solution to the existing
-              challenges within our public school system, King’s College is an
-              academic institution designed to lead the way in the field of 21st
-              century education while still preserving our historic and timeless
-              values. At King’s College our focus is the next generation!​
-            </p>
-            <h3>Philosophy</h3>
-            <h3>School Values</h3>
-            <Button>Registration Form</Button>
+    <>
+      {about && (
+        <StyledAbout>
+          <div className='wrapper'>
+            <div className='content'>
+              <div className='left'>
+                <h1>Who We Are</h1>
+                <p>
+                  With a mission to “Develop Students Into World Citizens”,
+                  King’s College is a unique co-educational, university
+                  preparatory day school with an academic breadth spanning from
+                  Pre-School (age 2) to University entrance. Driven by the quest
+                  for academic excellence and brought forth as a viable solution
+                  to the existing challenges within our public school system,
+                  King’s College is an academic institution designed to lead the
+                  way in the field of 21st century education while still
+                  preserving our historic and timeless values. At King’s College
+                  our focus is the next generation!​
+                </p>
+                <h3>Philosophy</h3>
+                <h3>School Values</h3>
+                <Button>Registration Form</Button>
+              </div>
+              <div className='right'>
+                <p>
+                  <q>
+                    And all thy children shall be taught of the Lord and great
+                    shall be the peace of thy children.
+                  </q>{' '}
+                  - Isaiah 54:13​
+                </p>
+              </div>
+            </div>
           </div>
-          <div className='right'>
-            <p>
-              <q>
-                And all thy children shall be taught of the Lord and great shall
-                be the peace of thy children.
-              </q>{' '}
-              - Isaiah 54:13​
-            </p>
-          </div>
-        </div>
-      </div>
-    </StyledAbout>
+        </StyledAbout>
+      )}
+    </>
   )
 }
 
@@ -48,22 +52,14 @@ const StyledAbout = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(
-      0% 5%,
-      8% 5%,
-      10% 0,
-      12% 5%,
-      100% 5%,
-      100% 100%,
-      0 100%
-    );
-    background-color: rgba(255, 255, 255, 0.85);
-    width: 80vw;
+    clip-path: polygon(0% 5%, 5% 5%, 7% 0, 9% 5%, 100% 5%, 100% 100%, 0 100%);
+    background-color: rgba(255, 255, 255, 0.82);
+    width: 90vw;
     height: 60vh;
     z-index: 10;
-    border: 1px solid var(--blue);
+    /* border: 1px solid var(--blue); */
     color: var(--blue);
-    padding: 3rem 3rem 5rem 3rem;
+    padding: 3rem 4rem 5rem 4rem;
   }
   .triangle {
   }
@@ -76,6 +72,9 @@ const StyledAbout = styled.div`
     flex: 1;
     margin-right: 3rem;
     position: relative;
+  }
+  h1 {
+    text-transform: uppercase;
   }
   ${Button} {
     margin-top: 1rem;

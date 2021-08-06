@@ -2,26 +2,68 @@ import styled from 'styled-components'
 import NavLink from './NavLink'
 import Image from 'next/image'
 
-export default function Menu({ open, setOpen }) {
+export default function Menu({
+  about,
+  setAbout,
+  academics,
+  setAcademics,
+  admission,
+  setAdmission,
+  download,
+  setDownload,
+}) {
   return (
-    <StyledMenu open={open}>
-      <NavLink href='/'>
-        <a>
-          <Image width={120} height={40} src='/img/HOME.jpg' alt='home' />
-        </a>
-      </NavLink>
-      <NavLink href='/'>
-        <a>About</a>
-      </NavLink>
-      <NavLink href='/'>
-        <a>Academics</a>
-      </NavLink>
-      <NavLink href='/'>
-        <a>Admission</a>
-      </NavLink>
-      <NavLink href='/'>
-        <a>Download</a>
-      </NavLink>
+    <StyledMenu>
+      <a
+        onClick={() => {
+          setAbout(false)
+          setAcademics(false)
+          setAdmission(false)
+          setDownload(false)
+        }}
+      >
+        <Image width={120} height={40} src='/img/HOME.jpg' alt='home' />
+      </a>
+      <a
+        onClick={() => {
+          setAbout(!about)
+          setAcademics(false)
+          setAdmission(false)
+          setDownload(false)
+        }}
+      >
+        About
+      </a>
+      <a
+        onClick={() => {
+          setAbout(false)
+          setAcademics(!academics)
+          setAdmission(false)
+          setDownload(false)
+        }}
+      >
+        Academics
+      </a>
+      <a
+        onClick={() => {
+          setAbout(false)
+          setAcademics(false)
+          setAdmission(!admission)
+          setDownload(false)
+        }}
+      >
+        Admission
+      </a>
+      <a
+        onClick={() => {
+          setAbout(false)
+          setAcademics(false)
+          setAdmission(false)
+          setDownload(!download)
+        }}
+      >
+        Download
+      </a>
       <NavLink href='/'>
         <a>
           <Image
@@ -55,13 +97,20 @@ export default function Menu({ open, setOpen }) {
 
 const StyledMenu = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100vw;
   a {
     color: var(--blue);
     margin: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
     &:not(.button)[aria-current] {
     }
   }
