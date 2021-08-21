@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
   const [academics, setAcademics] = useState(false)
   const [admission, setAdmission] = useState(false)
   const [download, setDownload] = useState(false)
+  const [calendar, setCalendar] = useState(false)
 
   return (
     <>
@@ -20,6 +21,8 @@ function MyApp({ Component, pageProps }) {
         setAdmission={setAdmission}
         download={download}
         setDownload={setDownload}
+        calendar={calendar}
+        setCalendar={setCalendar}
       >
         <GlobalStyle />
         <Component
@@ -32,6 +35,8 @@ function MyApp({ Component, pageProps }) {
           setAdmission={setAdmission}
           download={download}
           setDownload={setDownload}
+          calendar={calendar}
+          setCalendar={setCalendar}
         />
       </Layout>
     </>

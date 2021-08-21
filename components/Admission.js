@@ -11,13 +11,18 @@ export default function Admission({ admission }) {
               <h1>Admission</h1>
               <div className='cols'>
                 <div className='col'>
-                  <Button>Core Subjects</Button>
+                  <Button>Plan a Visit </Button>
                 </div>
                 <div className='col'>
-                  <Button>Core Subjects</Button>
+                  <Button>Application Form</Button>
                 </div>
                 <div className='col'>
-                  <Button>Core Subjects</Button>
+                  <Button
+                    href='/file/Tuition Schedule 2021.pdf'
+                    target='_blank'
+                  >
+                    Fees
+                  </Button>
                 </div>
               </div>
             </div>

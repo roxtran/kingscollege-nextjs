@@ -11,6 +11,8 @@ export default function Navbar({
   setAdmission,
   download,
   setDownload,
+  calendar,
+  setCalendar,
 }) {
   return (
     <StyledNavbar>
@@ -23,6 +25,8 @@ export default function Navbar({
         setAdmission={setAdmission}
         download={download}
         setDownload={setDownload}
+        calendar={calendar}
+        setCalendar={setCalendar}
       />
     </StyledNavbar>
   )

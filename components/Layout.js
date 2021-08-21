@@ -10,6 +10,8 @@ export default function Layout({
   setAdmission,
   download,
   setDownload,
+  calendar,
+  setCalendar,
 }) {
   return (
     <>
@@ -22,6 +24,8 @@ export default function Layout({
         setAdmission={setAdmission}
         download={download}
         setDownload={setDownload}
+        calendar={calendar}
+        setCalendar={setCalendar}
       />
       <main>{children}</main>
     </>

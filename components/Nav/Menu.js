@@ -11,6 +11,8 @@ export default function Menu({
   setAdmission,
   download,
   setDownload,
+  calendar,
+  setCalendar,
 }) {
   return (
     <StyledMenu>
@@ -74,12 +76,20 @@ export default function Menu({
           />
         </a>
       </NavLink>
-      <NavLink href='/'>
-        <a>Calendar</a>
-      </NavLink>
-      <NavLink href='/'>
-        <a>Careers at KC</a>
-      </NavLink>
+      <a
+        onClick={() => {
+          setAbout(false)
+          setAcademics(false)
+          setAdmission(false)
+          setDownload(false)
+          setCalendar(!calendar)
+        }}
+      >
+        Calendar
+      </a>
+      <a href='/file/Teacher JD.pdf' target='_blank'>
+        Careers at KC
+      </a>
       <NavLink href='/'>
         <a>Contact</a>
       </NavLink>

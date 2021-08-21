@@ -14,10 +14,17 @@ export default function Download({ download }) {
                   <Button>Parent Handbooks</Button>
                 </div>
                 <div className='col'>
-                  <Button>Student Uniform</Button>
+                  <Button href='/file/Uniform Policy.pdf' target='_blank'>
+                    Student Uniform
+                  </Button>
                 </div>
                 <div className='col'>
-                  <Button href='/file/KC 2021-22 Calendar - Landscape.pdf'>Calendar</Button>
+                  <Button
+                    href='/file/KC 2021-22 Calendar - Landscape.pdf'
+                    target='_blank'
+                  >
+                    Calendar
+                  </Button>
                 </div>
               </div>
             </div>
